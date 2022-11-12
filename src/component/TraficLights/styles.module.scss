@@ -1,0 +1,27 @@
+.Container {
+  position: absolute;
+  background: #333;
+  width: 150px;
+  height: 440px;
+  border-radius: 10px;
+  border: 3px solid #222;
+}
+
+.ItemDefault {
+  background: #666;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #222;
+  margin-left: 12px;
+  margin-top: 16px;
+  &_Green {
+    background-color: green;
+  }
+  &_Yellow {
+    background-color: yellow;
+  }
+  &_Red {
+    background-color: red;
+  }
+}

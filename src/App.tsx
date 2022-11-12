@@ -1,8 +1,8 @@
+import { TraficLights } from "./component/TraficLights/TraficLights";
+
 function App() {
   return (
-    <div>
-      traffic-lights
-    </div>
+    <TraficLights />
   );
 }
 
