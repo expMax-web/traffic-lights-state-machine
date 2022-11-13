@@ -1,10 +1,13 @@
 import { FC, useReducer } from "react";
+
+import { TraficLightsButton } from "./TraficLightsButton";
+import { TraficLightsItem } from "./TraficLightsItem";
 import { TRAFIC_LIGHTS_ITEMS_INITIAL_STATE } from "./constants";
+import { TraficLightsSchema } from "./icon";
 import traficLightsReducer from "./reducers";
 
 import styles from './styles.module.scss'
-import { TraficLightsButton } from "./TraficLightsButton";
-import { TraficLightsItem } from "./TraficLightsItem";
+
 
 export const TraficLights: FC = () => {
 
@@ -16,8 +19,14 @@ export const TraficLights: FC = () => {
                 {traficLightsItemsState.map((item) => {
                     return <TraficLightsItem color={item.color} isActive={item.isActive} key={item.color} />
                 })}
+                <TraficLightsButton onClick={() => dispatch({ type: 'SWITCH_COLOR' })} />
             </div>
-            <TraficLightsButton onClick={() => dispatch({ type: 'SWITCH_COLOR' })} />
+            <img
+                src={TraficLightsSchema}
+                alt=""
+                width={286}
+                height={407}
+            />
         </div>
     )
 }
